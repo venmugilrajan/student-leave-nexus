@@ -20,7 +20,6 @@ interface AuthContextType {
   user: User | null;
   loading: boolean;
   login: (email: string, password: string) => Promise<boolean>;
-  loginWithGoogle: () => Promise<boolean>;
   logout: () => void;
   register: (name: string, email: string, password: string, role: UserRole, registrationNumber?: string) => Promise<boolean>;
 }
@@ -91,31 +90,6 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     });
   };
 
-  // Google login (simulated)
-  const loginWithGoogle = async (): Promise<boolean> => {
-    setLoading(true);
-    
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        // Simulate successful Google login - defaults to student
-        const googleUser: User = {
-          id: 'g1',
-          name: 'Google User',
-          email: 'google@example.com',
-          role: 'student',
-          registrationNumber: 'G12345',
-          class: '10-B'
-        };
-        
-        setUser(googleUser);
-        localStorage.setItem('user', JSON.stringify(googleUser));
-        toast.success('Logged in with Google successfully');
-        setLoading(false);
-        resolve(true);
-      }, 1500);
-    });
-  };
-
   // Logout function
   const logout = () => {
     setUser(null);
@@ -170,7 +144,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   };
 
   return (
-    <AuthContext.Provider value={{ user, loading, login, loginWithGoogle, logout, register }}>
+    <AuthContext.Provider value={{ user, loading, login, logout, register }}>
       {children}
     </AuthContext.Provider>
   );

@@ -19,7 +19,7 @@ const LoginPage: React.FC = () => {
     <div className="min-h-screen bg-gray-50 flex flex-col">
       <div className="container mx-auto px-4 py-8 flex-1">
         <div className="max-w-lg mx-auto text-center mb-8">
-          <h1 className="text-3xl font-bold mb-2 text-school-primary">Student Leave Nexus</h1>
+          <h1 className="text-3xl font-bold mb-2 text-school-primary">Lambda</h1>
           <p className="text-gray-600">Streamlined leave management system for schools</p>
         </div>
         
@@ -29,7 +29,7 @@ const LoginPage: React.FC = () => {
       </div>
       
       <footer className="py-4 text-center text-sm text-gray-500 border-t">
-        &copy; {new Date().getFullYear()} Leave Nexus. All rights reserved.
+        &copy; {new Date().getFullYear()} Lambda. All rights reserved.
       </footer>
     </div>
   );

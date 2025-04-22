@@ -15,9 +15,9 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center space-x-2">
             <div className="bg-school-primary rounded-md w-8 h-8 flex items-center justify-center">
-              <span className="text-white font-bold">LN</span>
+              <span className="text-white font-bold">λ</span>
             </div>
-            <span className="font-bold text-xl">Leave Nexus</span>
+            <span className="font-bold text-xl">Lambda</span>
           </div>
           
           <div>
@@ -118,7 +118,7 @@ const Index = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to streamline your leave management?</h2>
           <p className="text-white/80 mb-8 max-w-2xl mx-auto">
-            Join schools already using Leave Nexus to simplify administrative tasks.
+            Join schools already using Lambda to simplify administrative tasks.
           </p>
           <Button 
             onClick={() => navigate('/login')} 
@@ -138,15 +138,15 @@ const Index = () => {
             <div className="mb-4 md:mb-0">
               <div className="flex items-center space-x-2">
                 <div className="bg-white rounded-md w-8 h-8 flex items-center justify-center">
-                  <span className="text-school-primary font-bold">LN</span>
+                  <span className="text-school-primary font-bold">λ</span>
                 </div>
-                <span className="font-bold text-xl">Leave Nexus</span>
+                <span className="font-bold text-xl">Lambda</span>
               </div>
               <p className="text-gray-400 mt-2">Streamlining school leave management</p>
             </div>
             
             <div className="text-center md:text-right">
-              <p>&copy; {new Date().getFullYear()} Leave Nexus. All rights reserved.</p>
+              <p>&copy; {new Date().getFullYear()} Lambda. All rights reserved.</p>
             </div>
           </div>
         </div>
